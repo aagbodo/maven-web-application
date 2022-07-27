@@ -33,9 +33,9 @@ pipeline{
     }
       stage('predeployment'){
       steps{
-        sh "echo creating docker image"
+        sh "docker build" "
         sh "docker build -t mylandmarktech/maven-web-app . "
-        sh "docker push mylandmarktech/maven-web-app"
+       //sh "docker push mylandmarktech/maven-web-app"
       }
     }
     stage('UnDeploy'){
